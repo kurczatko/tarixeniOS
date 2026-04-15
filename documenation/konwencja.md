@@ -47,6 +47,6 @@ WAZNE: dodaj keyboard_init();
 
 aby zrobic iso uruchom komende w glownym folderze:
 
-cd build/iso && xorriso -as mkisofs -o ../xentarios.iso -b bootx64.efi -no-emul-boot -boot-load-size 4 -boot-info-table --efi-boot bootx64.efi .
+cd build/iso && xorriso -as mkisofs -o ../tarixeni.iso -b bootx64.efi -no-emul-boot -boot-load-size 4 -boot-info-table --efi-boot bootx64.efi .
 
 UWAGA: NARAZIE WERSJA ISO JEST EKSPERYMENTALNA I NIE OBIECUJEMY ZE ZADZIALA NA PRAWDZIWYM SPRZECIE
