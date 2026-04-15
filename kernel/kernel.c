@@ -1,4 +1,3 @@
-// clovaos by radoslaw sitarski 2026 v1.0
 
 #include "../include/printf/printf.h"
 #include "../include/printf/vga.h"
@@ -12,7 +11,7 @@ void kernel_main(void)
         blue();
         konfiguracja();
         vga_init();
-        printf("xentariOS by radoslaw sitarski 2026 shell. write command!\n");
+        printf("tarixeniOS by radoslaw sitarski 2026 shell. write command!\n");
         shell();
     }
 }
