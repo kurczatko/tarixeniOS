@@ -21,8 +21,8 @@ LD64 := ld
 OBJCOPY := objcopy
 NASM := nasm
 
-CFLAGS32 := -m32 -ffreestanding -fno-pic -fno-pie -nostdlib -nostdinc -Wall -Wextra -Iinclude -Iinclude/printf -fno-stack-protector
-CFLAGS64 := -m64 -ffreestanding -fno-pic -fno-pie -nostdlib -nostdinc -Wall -Wextra -Iinclude -Iinclude/printf -fno-stack-protector -mcmodel=kernel -mno-red-zone
+CFLAGS32 := -m32 -ffreestanding -fno-pic -fno-pie -nostdlib -nostdinc -Wall -Wextra -I. -Iinclude -Iinclude/printf -Ikernel -fno-stack-protector
+CFLAGS64 := -m64 -ffreestanding -fno-pic -fno-pie -nostdlib -nostdinc -Wall -Wextra -Iinclude -Iinclude/printf -Ikernel -fno-stack-protector -mcmodel=kernel -mno-red-zone
 LDFLAGS32 := -m elf_i386 -T linker.ld
 LDFLAGS64 := -T linker64.ld
 
