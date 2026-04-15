@@ -7,5 +7,8 @@ void pakiet() {
     vga_init();
     keyboard_init();
     printf(" napisz dokument:\n");
-    keyboard_getchar();
+    while(1) {
+        char c = keyboard_getchar();
+        printf("%c", c);
+    }
 }
