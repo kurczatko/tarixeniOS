@@ -21,12 +21,12 @@ LD64 := ld
 OBJCOPY := objcopy
 NASM := nasm
 
-CFLAGS32 := -m32 -ffreestanding -fno-pic -fno-pie -nostdlib -nostdinc -Wall -Wextra -I. -Iinclude -Iinclude/printf -Ikernel -fno-stack-protector
-CFLAGS64 := -m64 -ffreestanding -fno-pic -fno-pie -nostdlib -nostdinc -Wall -Wextra -Iinclude -Iinclude/printf -Ikernel -fno-stack-protector -mcmodel=kernel -mno-red-zone
+CFLAGS32 := -m32 -ffreestanding -fno-pic -fno-pie -nostdlib -nostdinc -Wall -Wextra -I. -Iinclude -Iinclude/printf -Ikernel -Igraficzny_tryb -fno-stack-protector
+CFLAGS64 := -m64 -ffreestanding -fno-pic -fno-pie -nostdlib -nostdinc -Wall -Wextra -Iinclude -Iinclude/printf -Ikernel -Igraficzny_tryb -fno-stack-protector -mcmodel=kernel -mno-red-zone
 LDFLAGS32 := -m elf_i386 -T linker.ld
 LDFLAGS64 := -T linker64.ld
 
-KERNEL_SOURCES := $(wildcard kernel/*.c) $(wildcard kernel/apps/*.c) $(wildcard include/printf/*.c) include/blue.c $(wildcard drivers/*.c)
+KERNEL_SOURCES := $(wildcard kernel/*.c) $(wildcard kernel/apps/*.c) $(wildcard include/printf/*.c) include/blue.c $(wildcard drivers/*.c) $(wildcard graficzny_tryb/*.c)
 KERNEL_OBJECTS32 := $(patsubst %.c,$(BUILD_DIR)/%.o,$(KERNEL_SOURCES))
 KERNEL_OBJECTS64 := $(patsubst %.c,$(BUILD_DIR)/%64.o,$(KERNEL_SOURCES))
 
