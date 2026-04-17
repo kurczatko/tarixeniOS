@@ -1,8 +1,7 @@
 <img width="879" height="419" alt="system" src="https://github.com/user-attachments/assets/54e57c95-b241-4526-a9ee-4c2861fc7bcb" />
 System tarixeniOS to system napisany w C który ma za zadanie być zamiennikiem dla systemów korporacyjnych lub tych cięższych, przez co nadaje się na stare komputery. Mile widziane są jakiekolwiek sugestie dotyczące systemu.
 jeżeli chcesz dodać jakąś funkcje śmiało wyślij zmiane a ja ją zatwierdze.
-<img width="128" height="128" alt="pixil-frame-0(1)" src="https://github.com/user-attachments/assets/e4202a3d-d16a-41e6-963c-af7f67a6f324" />
-
+<img width="256" height="256" alt="pixil-frame-0(5)" src="https://github.com/user-attachments/assets/9f2f3471-7e7b-4c8b-a23e-cb112aa13e31" />
 
 # jak dolaczyc
 
