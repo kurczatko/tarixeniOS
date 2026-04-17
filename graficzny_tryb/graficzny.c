@@ -1,11 +1,33 @@
 #include "graficzny.h"
 
-void graficzny() {
-    __asm__ volatile (
-        ".intel_syntax noprefix\n\t"
-        "mov ax, 0x0013\n\t"
-        "int 0x10"
+void set_mode_13h() {
+    asm volatile(
+        "mov $0x13, %%ax\n\t"
+        "int $0x10"
+        :
+        :
+        : "ax"
     );
+}
 
-    while(1);
+void putpixel(int x, int y, unsigned char color) {
+    unsigned char *video = (unsigned char *)0xA0000;
+    unsigned int offset = y * 320 + x;
+    video[offset] = color;
+}
+
+void wait_key() {
+    asm volatile(
+        "xor %%ah, %%ah\n\t"
+        "int $0x16"
+        :
+        :
+        : "ax"
+    );
+}
+
+void graficzny() {
+    set_mode_13h();
+    putpixel(2, 13, 7);
+    wait_key();
 }

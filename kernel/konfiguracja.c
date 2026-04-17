@@ -24,7 +24,8 @@ void konfiguracja() {
         if (com == '\n' || com == '\r') {
             buf[i] = 0;
             if (buf[0] == 'g') {
-                graficzny();
+                set_mode_13h();
+                putpixel(31, 255, 210);
             }
             break;
         } else {
