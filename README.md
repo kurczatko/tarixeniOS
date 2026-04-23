@@ -11,6 +11,12 @@ aby dolaczyc wyslij mi maila na kurczatkojestslodkie@gmail.com i w nim ma byc za
  - jaka masz wiedze
  - pokaz wczesniejszy kod jaki robiles w innych projektach
 
+## role
+
+- deweloper kernela
+- tester
+- deweloper od strony użytkownika
+
 # po co dolaczyc
 
 do projektu warto dolaczyc np. dlatego ze system jest przeznaczony do nauki dzialania systemu, i chce aby wieksza spolecznosc sie nim zainsteresowala.
