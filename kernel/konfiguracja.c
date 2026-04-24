@@ -25,7 +25,7 @@ void konfiguracja() {
             buf[i] = 0;
             if (buf[0] == 'g') {
                 set_mode_13h();
-                putpixel(31, 255, 210);
+                putpixel(255, 0, 0); // nie wiem czemu ale tryb graficzny nie dziala, bedzie trzeba to naprawic.
             }
             break;
         } else {
