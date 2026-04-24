@@ -7,6 +7,7 @@
 #include "../kernel/apps/calc.h"
 #include "../kernel/apps/appdownload/appdownload.h"
 #include "../kernel/apps/wyp.hpp"
+#include "../kernel/apps/kalendarz.h"
 
 void shell() {
     vga_init();
@@ -33,11 +34,16 @@ void shell() {
                 printf(" a - sklep z aplikacjami\n");
                 printf(" r - wylaczenie\n");
                 printf(" w - wypisanie tekstu\n");
+                printf(" g - kalendarz\n");
             }
 
             if (buf[0] == 'v') {
                 printf(" wersja: 1.0.0\n");
                 printf("\n");
+            }
+
+            if (buf[0] == 'g'){
+                kalendarz();
             }
 
             if (buf[0] == 'w') {
