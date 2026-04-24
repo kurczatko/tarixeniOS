@@ -8,6 +8,7 @@
 #include "../kernel/apps/appdownload/appdownload.h"
 #include "../kernel/apps/wyp.hpp"
 #include "../kernel/apps/kalendarz.h"
+#include "panika.h"
 
 void shell() {
     vga_init();
@@ -35,11 +36,16 @@ void shell() {
                 printf(" r - wylaczenie\n");
                 printf(" w - wypisanie tekstu\n");
                 printf(" g - kalendarz\n");
+                printf(" u - panika jadra\n");
             }
 
             if (buf[0] == 'v') {
                 printf(" wersja: 1.0.0\n");
                 printf("\n");
+            }
+
+            if (buf[0] == 'u') {
+                panika();
             }
 
             if (buf[0] == 'g'){
