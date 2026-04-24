@@ -46,3 +46,49 @@ c++ można użyć tylko wtedy gdy pozwole i nie w krytycznych miejscach, tylko w
 # historia
 
 system powstał ponieważ od zawsze chciałem stworzyć system ale nie wiedziałem od czego zacząć, gdy poznałem assembler i C, obejrzałem kilka poradników wziąłem się do roboty. 
+
+# jak uruchomić?
+
+to zależy czy pobierasz wydanie czy kod zródłowy
+
+## oficjalne wydanie
+
+przy oficjalnym wydaniu wchodzisz do folderu pobrane:
+
+`cd Pobrane`
+
+jesli folder sie nazywa downloads:
+
+`cd Downloads`
+
+ponziej wlaczanie w qemu (chyba ze chcesz na sprzęcie ale nie sądze aby było to możliwe):
+
+`qemu-system-x86_64 -hda tarixenOS.img`
+
+i tyle.
+
+## pobranie kodu zrodlowego
+
+jezeli pobrales sam kod zrodlowy z githuba musisz sam go skompilowac i rowniez nie ma pewnosci ze bedzie dzialac:
+
+wchodzisz do folderu pobrane:
+
+`cd Pobrane`
+
+lub
+
+`cd Downloads`
+
+pozniej wchodzisz do folderu projektu 
+
+`cd tarixenOS-main`
+
+i robisz build:
+
+`make`
+
+a nastepnie wlaczanie w qemu:
+
+`qemu-system-x86_64 -hda tarixenOS.img`
+
+i tyle.
