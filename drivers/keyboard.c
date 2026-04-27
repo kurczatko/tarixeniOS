@@ -12,8 +12,11 @@ void keyboard_init(void) {
 }
 
 char keyboard_getchar(void) {
-    while (!(inb(KEYBOARD_STATUS_PORT) & 1));
-    uint8_t scancode = inb(KEYBOARD_DATA_PORT);
+    uint8_t scancode;
+    do {
+        while (!(inb(KEYBOARD_STATUS_PORT) & 1)); //nareszcie naprawiłem to ze miedzy literami jest odstep a nie powinno byc, łuhu!!!!!
+        scancode = inb(KEYBOARD_DATA_PORT);
+    } while (scancode >= 0x80);
     return keyboard_scancode_to_char(scancode);
 }
 
