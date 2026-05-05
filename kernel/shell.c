@@ -10,6 +10,7 @@
 #include "../kernel/apps/kalendarz.h"
 #include "panika.h"
 #include "../scripts/mem.h"
+#include "../include/blue.h"
 
 void shell() {
     vga_init();
@@ -40,11 +41,16 @@ void shell() {
                 printf(" u - panika jadra\n");
                 printf(" m - ilosc dostepnej pamieci\n");
                 printf(" cs - sprawdz sam\n");
+                printf(" b - czyszczenie ekranu\n");
             }
 
             if (buf[0] == 'v') {
                 printf(" wersja: 2.0.0\n");
                 printf("\n");
+            }
+
+            if (buf[0] == 'b') {
+                blue();
             }
 
             if(buf[0] == 'c' && buf[1] == 's') {

@@ -12,10 +12,10 @@ void konfiguracja() {
     blue();
     beep();
     printf("                                      tarixenOS                                                                                                                                                                                                   \n");
-    printf("Witam w Systemie tarixenOS!                                                                                                              \n");
-    printf("nasz system jest dopiero co stworzony wiec sie nie dziw ze jest niedokonczony                                                                                                                                                                          \n");
-    printf("mam nadzieje ze ci sie spodoba                                                                                                                                         \n");
-    printf("kliknij enter aby wyjsc z konfiguracji (jesli chcesz tryb graficzny napisz g)                                                                                                                                                                                                             \n");
+    printf(" Witam w Systemie tarixenOS!                                                                                                              \n");
+    printf(" nasz system jest dopiero co stworzony wiec sie nie dziw ze jest niedokonczony                                                                                                                                                                          \n");
+    printf(" mam nadzieje ze ci sie spodoba                                                                                                                                         \n");
+    printf(" kliknij enter aby wyjsc z konfiguracji (jesli chcesz tryb graficzny napisz g)                                                                                                                                                                                                             \n");
     printf("                                                                                                                                                                                                                                                   ");
     char buf[256] = {0};
     int i = 0;
