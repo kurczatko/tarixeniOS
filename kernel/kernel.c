@@ -12,10 +12,21 @@ void kernel_main(void)
     while(1) {
         keyboard_init();
         blue();
+        /*
+        * mozliwe problemy z blue() poniewaz zmienilem to co robi
+        * nazwa moze mylic
+        */
         konfiguracja();
         vga_init();
         printf("system jest prosty w uzyciu, napisz 'h' aby wejsc w menu pomocy.\n");
-        printf("tarixenOS by radoslaw sitarski 2026 shell. write command!\n");
+        /*
+        * inicjacja klawiatury
+        * wyczyszczenie ekranu bo uzytkownik go nie wymyl (chyba)
+        * konfiguracja
+        * inicjacja vga
+        * wypisanie tekstu
+        * i nareszcie shell
+        */
         shell();
     }
 }
