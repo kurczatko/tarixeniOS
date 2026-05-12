@@ -23,7 +23,7 @@ void calc() {
     }
     if (d == '/') {
         if (n1 && n2 == 0) {
-            printf(" pamietaj kazimiero nigdy nie dziel przez zero\n");
+            printf(" dzielenie przez zero (ciesz sie ze wylapal to system bo kernel bys rozwalil se)\n");
         } else {
             printf(" wynik:");
             printf(n1 / n2);
