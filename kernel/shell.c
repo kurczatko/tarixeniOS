@@ -19,7 +19,7 @@ void shell() {
 
     konta();
 
-    printf(" &# ");
+    printf(" %c&# ",nazwa);
     char buf[256] = {0};
     int i = 0;
     while (1) {
@@ -122,7 +122,7 @@ void shell() {
                 }
             }
 
-            printf(" &# ");
+            printf(" %c&# ",nazwa);
             i = 0;
         } else if (com == '\b') {
             if (i > 0) {
