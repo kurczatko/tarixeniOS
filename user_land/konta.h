@@ -2,7 +2,5 @@
 #define KONTA_H
 
 void konta();
-char nazwa;
-char haslo;
 
 #endif

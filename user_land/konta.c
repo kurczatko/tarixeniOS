@@ -14,7 +14,7 @@ void konta() {
     printf(" jakie haslo? (jedna litera) \n");
     char haslo = keyboard_getchar();
     blue();
-    printf(nazwa);
+    printf("%c\n", nazwa);
     printf(" wpisz haslo:");
     char zgdh = keyboard_getchar();
     if (zgdh == haslo) {
