@@ -4,7 +4,6 @@
 #include "../../drivers/keyboard.h"
 
 void calc() {
-    while(1) {
         keyboard_init();
         vga_init();
         printf(" siema w kalkulatorze\n");
@@ -28,5 +27,4 @@ void calc() {
                 printf(n1 / n2);
             }
         } */
-    }
 }

@@ -16,7 +16,7 @@ void shell() {
     vga_init();
     keyboard_init();
 
-    printf(" @#");
+    printf(" @# ");
     char buf[256] = {0};
     int i = 0;
     while (1) {
@@ -119,7 +119,7 @@ void shell() {
                 }
             }
 
-            printf(" @#");
+            printf(" @# ");
             i = 0;
         } else if (com == '\b') {
             if (i > 0) {
