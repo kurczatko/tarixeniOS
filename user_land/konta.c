@@ -6,6 +6,8 @@
 #include "../kernel/shell.h"
 
 void konta() {
+    vga_init();
+    keyboard_init();
     printf(" prosimy o utworzenie konta.\n");
     printf(" jak chcesz sie nazywac? (jedna litera)\n");
     char nazwa = keyboard_getchar();
