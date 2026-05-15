@@ -84,10 +84,15 @@ lub
 pozniej wchodzisz do folderu projektu 
 
 `cd tarixenOS-main`
+`cd tarixenOS`
 
 i robisz build:
 
 `make`
+
+wchodzisz do niego:
+
+`cd build`
 
 a nastepnie wlaczanie w qemu:
 
