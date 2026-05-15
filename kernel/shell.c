@@ -56,21 +56,21 @@ void shell() {
 
             if (buf[0] == "^") {
                 printf("czy chcesz:\n");
-                printf("1. stworzyc folder\n 2. wyswietlic zawartosc tego gdzie jestes\n 3. stworzyc plik\n");
+                printf("1. stworzyc folder\n 2. wyswietlic zawartosc tego gdzie jestes\n 3. stworzyc plik\n UWAGA! jak wpisujesz nazwe to tylko jedna litera.");
                 char odp = keyboard_getchar();
                 if (odp == "1") {
                     printf("nazwa:");
-                    const char *nazwa = keyboard_getchar();
+                    char nazwa = keyboard_getchar();
                     create_dir(nazwa);
                 }
                 if (odp == "2") {
                     printf("w jakim folderze?:");
-                    const char *folder = keyboard_getchar();
+                    char folder = keyboard_getchar();
                     ls(folder);
                 }
                 if (odp == "3") {
                     printf("nazwa:");
-                    const char *plik = keyboard_getchar();
+                    char plik = keyboard_getchar();
                     create_file(plik, 32);
                 }
             }
