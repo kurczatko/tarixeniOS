@@ -12,6 +12,7 @@
 #include "../scripts/mem.h"
 #include "../include/blue.h"
 #include "../user_land/konta.h"
+#include "../system_plikow/system_plikow.h"
 
 void shell() {
     vga_init();
@@ -45,11 +46,33 @@ void shell() {
                 printf(" m - ilosc dostepnej pamieci\n");
                 printf(" cs - sprawdz sam\n");
                 printf(" b - czyszczenie ekranu\n");
+                printf(" ^ - wszytsko co zwiazane z plikami\n");
             }
 
             if (buf[0] == 'v') {
                 printf(" wersja: 2.0.0\n");
                 printf("\n");
+            }
+
+            if (buf[0] == "^") {
+                printf("czy chcesz:\n");
+                printf("1. stworzyc folder\n 2. wyswietlic zawartosc tego gdzie jestes\n 3. stworzyc plik\n");
+                char odp = keyboard_getchar();
+                if (odp == "1") {
+                    printf("nazwa:");
+                    const char *nazwa = keyboard_getchar();
+                    create_dir(nazwa);
+                }
+                if (odp == "2") {
+                    printf("w jakim folderze?:");
+                    const char *folder = keyboard_getchar();
+                    ls(folder);
+                }
+                if (odp == "3") {
+                    printf("nazwa:");
+                    const char *plik = keyboard_getchar();
+                    create_file(plik, 32);
+                }
             }
 
             if (buf[0] == 'b') {
