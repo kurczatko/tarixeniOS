@@ -46,7 +46,7 @@ void shell() {
                 printf(" m - ilosc dostepnej pamieci\n");
                 printf(" cs - sprawdz sam\n");
                 printf(" b - czyszczenie ekranu\n");
-                printf(" ^ - wszytsko co zwiazane z plikami\n");
+                printf(" q - wszytsko co zwiazane z plikami\n");
             }
 
             if (buf[0] == 'v') {
@@ -54,23 +54,23 @@ void shell() {
                 printf("\n");
             }
 
-            if (buf[0] == "^") {
+            if (buf[0] == '^') {
                 printf("czy chcesz:\n");
-                printf("1. stworzyc folder\n 2. wyswietlic zawartosc tego gdzie jestes\n 3. stworzyc plik\n UWAGA! jak wpisujesz nazwe to tylko jedna litera.");
+                printf("a. stworzyc folder\n b. wyswietlic zawartosc tego gdzie jestes\n c. stworzyc plik\n UWAGA! jak wpisujesz nazwe to tylko jedna litera.");
                 char odp = keyboard_getchar();
-                if (odp == "1") {
+                if (odp == 'a') {
                     printf("nazwa:");
-                    char nazwa = keyboard_getchar();
+                    char nazwa[2] = { keyboard_getchar(), 0 };
                     create_dir(nazwa);
                 }
-                if (odp == "2") {
+                if (odp == 'b') {
                     printf("w jakim folderze?:");
-                    char folder = keyboard_getchar();
+                    char folder[2] = { keyboard_getchar(), 0 };
                     ls(folder);
                 }
-                if (odp == "3") {
+                if (odp == 'c') {
                     printf("nazwa:");
-                    char plik = keyboard_getchar();
+                    char plik[2] = { keyboard_getchar(), 0 };
                     create_file(plik, 32);
                 }
             }
